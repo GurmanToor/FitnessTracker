@@ -1,0 +1,94 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    text-align: center;
+    background-color: rgb(32, 49, 49);
+    margin:0px;
+    padding: 20px;
+    color: white;
+}
+#main-section{
+    background-color: gray;
+}
+.navbar{
+    width: 100vw;
+    display: flex;
+    padding: 1em;
+    padding-left: 0em;
+     /* Space the header items evenly across the top */
+    justify-content: space-evenly;
+    background-color: rgb(32, 49, 49);
+}
+.navbar a{
+   text-decoration: none;
+   color: white;
+}
+
+.navbar a:hover{
+    color: darkcyan;
+    text-decoration: underline;
+}
+
+.section{
+    height: 170vh;
+    width: inherit;
+    padding: 10%;
+}
+#overview{
+    font-size: larger;
+}
+#overview-header{
+    font-size: larger;
+}
+#video{
+    font-size: larger;
+
+}
+
+#postmortem{
+    font-size: larger;
+
+}
+#velocity{
+    font-size: larger;
+
+}
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    letter-spacing:4px;
+    font-family: Georgia;
+}
+/* Centered text */
+.top-left {
+    position: absolute;
+    top: 35px;
+    left: 20%;
+    font-size: 60px;
+    object-fit: cover;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    opacity: .9;
+}
+
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}

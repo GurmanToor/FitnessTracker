@@ -1,0 +1,6 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Source: https://developer.android.com/guide/topics/resources/color-list-resource -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    This is used for the 'New Cardio Workout' buttons to make sure the ones not pressed stay same color-->
+    <item android:state_pressed="false"
+        android:color="#00BFA5"/>
+</selector>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_gradient"
+    android:clearTaskOnLaunch="true"
+    android:launchMode="singleTask"
+    tools:context=".presentation.HomeActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="161dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="199dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/gympic"
+        app:layout_constraintBottom_toTopOf="@+id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/activity_home" />
+
+
+    <Button
+        android:id="@+id/activity_home"
+        android:layout_width="103dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="249dp"
+        android:backgroundTint="#0091EA"
+        android:onClick="toMyMeal"
+        android:text="My Meal"
+        android:textColor="#212121"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/current_day" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="toNotes"
+        android:padding="6dp"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/workout_home"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:onClick="toWorkout"
+                app:cardBackgroundColor="#00BFA5"
+                app:cardCornerRadius="6dp"
+                app:cardMaxElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="66dp"
+                        android:onClick="toWorkout"
+                        android:src="@drawable/logworkout" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/weight_log_home"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:onClick="openWeighLogging"
+                app:cardBackgroundColor="#0091EA"
+                app:cardCornerRadius="6dp"
+                app:cardMaxElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:onClick="openWeighLogging"
+                        android:src="@drawable/scale" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="120dp"-->
+            <!--                android:layout_marginRight="8dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                app:cardBackgroundColor="#FF6D00"-->
+            <!--                app:cardCornerRadius="6dp"-->
+            <!--                app:cardMaxElevation="6dp">-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="60dp"-->
+            <!--                        android:layout_height="60dp"-->
+            <!--                        android:src="@drawable/strategy" />-->
+
+            <!--                </RelativeLayout>-->
+            <!--            </androidx.cardview.widget.CardView>-->
+
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="120dp"-->
+            <!--                android:layout_marginLeft="8dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                app:cardBackgroundColor="#C51162"-->
+            <!--                app:cardCornerRadius="6dp"-->
+            <!--                app:cardMaxElevation="6dp">-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_gravity="center">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="60dp"-->
+            <!--                        android:layout_height="60dp"-->
+            <!--                        android:src="@drawable/setting" />-->
+
+            <!--                </RelativeLayout>-->
+            <!--            </androidx.cardview.widget.CardView>-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="toSettings"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting" />
+
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Gym Boy"
+        android:textColor="#fff"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
+        android:text="180lbs"
+        android:textColor="#fff"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/current_day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="17dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Current Day:"
+        android:textColor="#fff"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_day"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Mar 25, 2022"
+        android:textColor="#fff"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_home"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintStart_toEndOf="@+id/current_day_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+    <ProgressBar
+        android:id="@+id/daily_goal_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/daily_goal_circular_shape"
+        android:clickable="false"
+        android:indeterminate="false"
+        android:max="100"
+        android:onClick="toDailyCalorie"
+        android:progress="65"
+        android:progressDrawable="@drawable/daily_goal_progress_bar"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeight" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1200"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/daily_goal_progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/daily_goal_progressBar"
+        app:layout_constraintStart_toStartOf="@+id/daily_goal_progressBar"
+        app:layout_constraintTop_toTopOf="@+id/daily_goal_progressBar" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="165dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Today's Goal: 1200 calories"
+        android:textAlignment="center"
+        android:textColor="#FDFCFC"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="4dp"
+        android:text="click on progress bar to enter calories"
+        android:textAlignment="center"
+        android:textColor="#AFA8A8"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/daily_goal_progressBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

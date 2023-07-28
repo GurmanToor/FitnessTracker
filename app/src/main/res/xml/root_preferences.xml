@@ -1,0 +1,90 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:launchMode="singleTask"
+    android:clearTaskOnLaunch="true"
+    android:finishOnTaskLaunch="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/account_header">
+
+        <EditTextPreference
+            android:textColor="@color/white"
+            app:key="name_title"
+            app:title="@string/name_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:textColor="@color/white"
+            app:key="email_title"
+            app:title="@string/email_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="username_title"
+            app:title="@string/username_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="password_title"
+            app:title="@string/password_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/profile_header">
+        <SeekBarPreference
+            app:key="goal_title"
+            android:id="@string/goal_title"
+            android:title="@string/goal_title"
+            android:defaultValue="100"
+            app:showSeekBarValue="true"
+            android:max="300"/>
+
+        <SeekBarPreference
+            app:key="weight_title"
+            android:id="@string/weight_title"
+            android:title="@string/weight_title"
+            app:showSeekBarValue="true"
+            android:max="300"/>
+
+        <SwitchPreference
+            app:key="fasting_title"
+            android:id="@string/fasting_mode"
+            android:title="@string/fasting_mode"
+            android:summaryOn="Fasting mode is on"
+            android:summaryOff="Fasting mode is off"
+            />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_header">
+
+        <Preference
+            app:key="notifications"
+            app:title="@string/notifications"
+            app:useSimpleSummaryProvider="true" />
+        <Preference
+
+            app:key="clear_notifications"
+            app:title="Clear notifications"
+            app:useSimpleSummaryProvider="true" />
+        <Preference
+            app:key="clear_log"
+            app:title="@string/clear_log"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:key="clear_workout"
+            app:title="@string/clear_workout"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:key="logout"
+            app:title="@string/logout"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

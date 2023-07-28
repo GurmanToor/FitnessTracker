@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/weight_log_calender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corners_grey"
+                    android:minWidth="48dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/input_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_date"
+                    app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/analysis_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#0091EA"
+                    android:text="@string/analysis"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#000000"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/addWeight_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#0091EA"
+                    android:text="@string/add"
+                    android:textColor="#040404"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#000000"
+                    app:layout_constraintTop_toBottomOf="@+id/addWeight_button" />
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/weight_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/divider3" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weight_graph" />
+
+                <TextView
+                    android:id="@+id/weight_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/colorWeightLoggingText"
+                    android:fontFamily="@font/caudex"
+                    android:text="@string/weight_label"
+                    android:textColor="@color/colorWeightLoggingText"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/input_weight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_weight" />
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#0091EA"
+                    android:text="@string/save"
+                    android:textColor="#212121"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_date" />
+
+                <EditText
+                    android:id="@+id/input_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:autofillHints="200"
+                    android:backgroundTint="@color/colorWeightLoggingText"
+                    android:ems="10"
+                    android:hint="@string/date_hint"
+                    android:inputType="date"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWeightLoggingText"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/weight_log_calender"
+                    app:layout_constraintStart_toEndOf="@+id/date_label"
+                    app:layout_constraintTop_toBottomOf="@+id/input_weight" />
+
+                <TextView
+                    android:id="@+id/metrix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/colorWeightLoggingText"
+                    android:fontFamily="@font/caudex"
+                    android:text="@string/metrix_tag"
+                    android:textColor="@color/colorWeightLoggingText"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/input_weight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_weight" />
+
+                <EditText
+                    android:id="@+id/input_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:autofillHints="MM/DD/YYYY"
+                    android:backgroundTint="@color/colorWeightLoggingText"
+                    android:ems="10"
+                    android:hint="@string/weight_hint"
+                    android:inputType="number|numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWeightLoggingText"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/metrix"
+                    app:layout_constraintStart_toEndOf="@+id/weight_label"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                <TextView
+                    android:id="@+id/date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/colorWeightLoggingText"
+                    android:fontFamily="@font/caudex"
+                    android:text="@string/date_label"
+                    android:textColor="@color/colorWeightLoggingText"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/input_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_date" />
+
+                <TextView
+                    android:id="@+id/analysis_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWeightLoggingText"
+                    android:fontFamily="@font/caudex"
+                    android:textColor="@color/colorWeightLoggingText"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

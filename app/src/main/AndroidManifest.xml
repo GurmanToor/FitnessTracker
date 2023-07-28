@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fitness_tracker">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fitnesstracker">
+        <activity
+            android:name=".presentation.NoteEditorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.DiaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.AvatarSelector"
+            android:exported="false"
+            android:label="@string/title_activity_avator_selector"
+            android:theme="@style/Theme.Fitnesstracker.NoActionBar" />
+        <activity
+            android:name=".presentation.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".presentation.WorkoutHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.WorkoutHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.CreateStrengthExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.CreateCardioExerciseActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".WorkoutActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".presentation.WorkoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.HomeActivity" />
+        <activity android:name=".presentation.RegisterActivity" />
+        <activity android:name=".WeightLog" />
+        <activity android:name=".presentation.DailyCalorieGoal" />
+        <activity android:name=".presentation.MealActivity" />
+        <receiver android:name=".presentation.NotificationReceiver" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
